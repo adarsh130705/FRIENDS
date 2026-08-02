@@ -1,0 +1,96 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff758c,#ff7eb3,#8fd3f4,#84fab0);
+background-size:400% 400%;
+animation:bg 10s infinite alternate;
+}
+
+@keyframes bg{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+.container{
+text-align:center;
+background:rgba(255,255,255,.2);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 20px white;
+width:90%;
+max-width:400px;
+animation:zoom 2s;
+}
+
+@keyframes zoom{
+from{transform:scale(.5);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+.photo{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+object-fit:cover;
+box-shadow:0 0 25px hotpink;
+animation:float 3s infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-12px);}
+}
+
+h1{
+margin-top:20px;
+color:white;
+}
+
+p{
+margin:20px;
+font-size:18px;
+color:white;
+min-height:100px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:50px;
+font-size:18px;
+background:#ff006e;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.hearts::before{
+content:"💖 💕 🌸 💖 💕 🌸";
+position:absolute;
+font-size:40px;
+width:100%;
+animation:fall 12s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-120%);
+}
+100%{
+transform:translateY(120vh);
+}
+}
